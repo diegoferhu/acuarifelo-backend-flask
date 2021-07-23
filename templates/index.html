@@ -20,8 +20,8 @@
         socket.emit("get temperature", { data: "I'm connected!" });
       });
 
-      socket.on("my response", function (msg) {
-        console.log("My Response: ", msg);
+      socket.on("temperature", function (msg) {
+        console.log("Temperature: ", msg);
       });
     </script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>

@@ -40,8 +40,10 @@ def handle_get_temperature(json):
             return temp_c, temp_f
 
     while True:
-        print(read_temp())
+        temperature = read_temp()
+        response = {"celsius": temperature[0], "fahrenheit": temperature[1]}
         time.sleep(1)
+        emit("temperature", response)
 
 
 if __name__ == "__main__":
